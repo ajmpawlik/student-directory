@@ -1,16 +1,16 @@
 student_count = 11
 students = [
-"Dr. Hannibal Lecter",
-"Darth Vader",
-"Nurse Ratched",
-"Michael Corleone",
-"Alex DeLarge",
-"The Wicked Witch of the West",
-"Terminator",
-"Freddy Krueger",
-"The Jocker",
-"Joffrey Baratheon",
-"Norman Bates"
+{name: "Dr. Hannibal Lecter", cohort: :novemver},
+{name: "Darth Vader", cohort: :novemver},
+{name: "Nurse Ratched", cohort: :novemver},
+{name: "Michael Corleone", cohort: :novemver},
+{name: "Alex DeLarge", cohort: :novemver},
+{name: "The Wicked Witch of the West", cohort: :novemver},
+{name: "Terminator", cohort: :novemver},
+{name: "Freddy Krueger", cohort: :novemver},
+{name: "The Jocker", cohort: :novemver},
+{name: "Joffrey Baratheon", cohort: :novemver},
+{name: "Norman Bates", cohort: :novemver}
 ]
 
 def print_header
@@ -18,9 +18,9 @@ puts "The students of Villans Academy"
 puts "_____________"
 end
 
-def print(names)
-  names.each do |name|
-    puts name
+def print(students)
+  students.each do |student|
+    puts "#{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
 
