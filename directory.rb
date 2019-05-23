@@ -1,18 +1,3 @@
-student_count = 11
-students = [
-{name: "Dr. Hannibal Lecter", cohort: :novemver},
-{name: "Darth Vader", cohort: :novemver},
-{name: "Nurse Ratched", cohort: :novemver},
-{name: "Michael Corleone", cohort: :novemver},
-{name: "Alex DeLarge", cohort: :novemver},
-{name: "The Wicked Witch of the West", cohort: :novemver},
-{name: "Terminator", cohort: :novemver},
-{name: "Freddy Krueger", cohort: :novemver},
-{name: "The Jocker", cohort: :novemver},
-{name: "Joffrey Baratheon", cohort: :novemver},
-{name: "Norman Bates", cohort: :novemver}
-]
-
 def print_header
 puts "The students of Villans Academy"
 puts "_____________"
@@ -24,10 +9,26 @@ def print(students)
   end
 end
 
-def print_footer(names)
-  puts "Overall, we have #{names.count} great students"
+def print_footer(students)
+  puts "Overall, we have #{students.count} great students"
 end
 
+
+def input_students
+  puts "Please enter the names of the students"
+  puts "To finish, just hit return twice"
+  students = []
+  name = gets.chomp
+  while !name.empty? do
+    students << {name: name, cohort: :november}
+    puts "Now we have #{students.count} students"
+    name = gets.chomp
+  end
+  students
+end
+
+students = input_students
+#nothing happens until we call the methods
 print_header
 print(students)
 print_footer(students)
